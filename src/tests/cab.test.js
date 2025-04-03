@@ -126,6 +126,7 @@ describe('GET /api/cabs/list', () => {
     
         // console.log('❌ Debug: Response Body', res.body); // Check the response
     
+        
         expect(res.status).toBe(400);
         expect(res.body.message).toContain('Invalid query parameter');
     });
