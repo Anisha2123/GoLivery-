@@ -7,7 +7,9 @@ const { protect, isAdmin } = require('../middleware/authMiddleware'); // Check t
 
 const router = express.Router();
 
-router.get('/list', getCabs); // ✅ Public API
+// router.get('/list', getCabs); // ✅ Public API
+router.get('/list', protect,isAdmin, getCabs); // 🔒 Requires Login
+
 router.post('/add', protect, isAdmin, addCab); // ✅ Admin Only
 
 module.exports = router;

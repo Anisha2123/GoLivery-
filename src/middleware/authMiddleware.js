@@ -27,6 +27,8 @@ const protect = async (req, res, next) => {
 
 
 const isAdmin = (req, res, next) => {
+    // console.log('User in isAdmin middleware:', req.user);
+
     if (req.user && req.user.isAdmin) {
         next();
     } else {
