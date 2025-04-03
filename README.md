@@ -40,15 +40,18 @@ Create a .env file in the root directory and add the following:
     npm run dev
     Server will run at http://localhost:5000  
 
-## 🛠️ API Endpoints
+## 🛠️ API Endpoints  
+
 ### 1️⃣ User Authentication  
 
-|    Method     | Endpoint           | Access  |
-| ------------- |:-------------:| -----:|
+|    Method     | Endpoint           | Description  |  Access |
+| ------------- |:-------------:| -----:| -----: |
 | POST      | /api/users/register| Register a new user| Public |
 | POST      |	/api/users/login |   	Login & get JWT token	 | PUBLIC |  
 
 User Registration (/api/users/register)  
+![image](https://github.com/user-attachments/assets/772bb29d-2cf2-404d-85a8-ab1f84e6b615)
+
 Request:  
 
     {
@@ -62,12 +65,28 @@ Response:
     "message": "User registered successfully",
      "token": "jwt_token_here"
     }
+User Login (/api/users/login)  
+![image](https://github.com/user-attachments/assets/ed12e6a0-536f-43e7-bb8d-db7fd70a80b6)
+
+Request:  
+
+    {
+    "email": "john@example.com",
+    "password": "securepassword"
+    }
+Response:   
+
+    {
+     "token": "jwt_token_here"
+    }
 
 ### 2️⃣ Cab Listing
 |    Method     | Endpoint    | Description       | Access  |
 | ------------- |:-------------:| -----:|-----: |
 | 	Get     | 	/api/cabs/list| 	Get all available cabs| Public |
+| 	POST     | 	/api/cabs/add| 	Add new cabs| Public |
 
+Listing Cabs
 Response:   
 
     [
