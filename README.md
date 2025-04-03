@@ -108,8 +108,8 @@ JWT Authentication: Required for protected routes
 Input Validation: Using Joi for request validation  
 Role-Based Access: Admin vs. User access control  
 
-## 📡 Deployment
-🔹 Backend Hosted on Render: https://golivery.onrender.com/
+## 📡 Deployment  
+🔹 Backend Hosted on Render: https://golivery.onrender.com/  
 🔹 GitHub Repository: GitHub [Link](https://github.com/Anisha2123/GoLivery-)
 
 ## 💡 Best Practices Followed  
