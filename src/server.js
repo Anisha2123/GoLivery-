@@ -16,6 +16,11 @@ const generateToken = (id) => {
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.json({ message: "Ride-hailing API is live!" });
+});
+
+
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/cabs', require('./routes/cabRoutes'));
 app.use('/api/orders', require('./routes/orderRoutes'));
